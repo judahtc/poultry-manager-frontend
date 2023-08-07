@@ -1,0 +1,189 @@
+<div class="top-btns">
+<button mat-raised-button class="but" (click)="openModal()"> Add  <span class="fa fa-plus"></span></button>
+<button mat-raised-button class="but"> Remove  <span class="fa fa-trash"></span> </button>
+<button mat-raised-button class="but"> View <span class="fa fa-user"></span> </button>
+</div>
+<div class="custom-table">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="email">
+    <th mat-header-cell *matHeaderCellDef> Email. </th>
+    <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="username">
+    <th mat-header-cell *matHeaderCellDef> Username </th>
+    <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <ng-container matColumnDef="first_name">
+    <th mat-header-cell *matHeaderCellDef> First Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+  </ng-container>
+  <!-- Name Column -->
+  <!-- more_vert -->
+  <ng-container matColumnDef="last_name">
+    <th mat-header-cell *matHeaderCellDef> Last Name </th>
+    <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="address">
+    <th mat-header-cell *matHeaderCellDef> Address </th>
+    <td mat-cell *matCellDef="let element"> {{element.address}} </td>
+  </ng-container>
+  <ng-container matColumnDef="country">
+    <th mat-header-cell *matHeaderCellDef> Country </th>
+    <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+  </ng-container>
+  <ng-container matColumnDef="enabled">
+    <th mat-header-cell *matHeaderCellDef> enabled </th>
+    <td mat-cell *matCellDef="let element"> {{element.enabled}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="...">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element"> 
+      <mat-icon matSuffix class="more_vert_icon">more_vert</mat-icon>  
+    </td>
+  </ng-container>
+
+
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns" class="mat-row"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="mat-row"></tr>
+</table>
+
+</div>
+
+
+
+
+  <!-- The Modal Component -->
+  <app-modal title="My Modal" >
+    <section>
+      <div id="booking" class="section">
+        <div class="section-center">
+          <div class="container">
+            <div class="row">
+              <div class="booking-form">
+                <!-- <form [formGroup]="form" (ngSubmit)="[createProjectDB()]"> -->
+                  <form>                  <div class="">
+                    <div class="form-group d-flex justify-content-between align-items-center" style="margin-bottom: 2%">
+                      <input
+                        formControlName="email_address"
+                        name="email_address"
+                        class="form-control"
+                        type="text"
+                        placeholder="Email Address"
+                        style="margin-right: 5px;"
+                      />
+
+                      <input
+                        formControlName="username"
+                        name="username"
+                        class="form-control"
+                        type="text"
+                        placeholder="Username"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="" style="margin-bottom: 1.3%;">
+                    <div class="form-group">
+                      <input
+                        formControlName="start_date"
+                        name="start_date"
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        type="date"
+                        required
+                      />
+                      <span
+                        style="
+                          font-size: 70%;
+                          margin-left: 0.75%;
+                          color: #184c8f;
+                        "
+                        class=""
+                        >Start Date</span
+                      >
+                    </div>
+                  </div>
+                  <div class="" style="margin-bottom: 1.3%;">
+                    <div class="form-group">
+                      <input
+                        formControlName="valuation_date"
+                        name="valuation_date"
+                        class="form-control"
+                        placeholder="yyyy-mm-dd"
+                        type="date"
+                        required
+                      />
+                      <span
+                        style="
+                          font-size: 70%;
+                          margin-left: 0.75%;
+                          color: #184c8f;
+                        "
+                        class=""
+                        >Valuation Date</span
+                      >
+                    </div>
+                  </div>
+                  <div class="">
+                    <div class="form-group">
+                      <textarea
+                        class="form-control"
+                        id="exampleFormControlTextarea1"
+                        rows="2"
+                        formControlName="description"
+                        name="description"
+                        id="description"
+                      ></textarea>
+                      <span
+                        style="
+                          font-size: 80%;
+                          margin-left: 0.7%;
+                          color: midnightblue;
+                        "
+                        class=""
+                        ><Address></Address></span
+                      >
+                    </div>
+                  </div>
+
+                  <mat-form-field class="modal-form" >
+                    <mat-label>Address</mat-label>
+                    <input matInput class="modal-form-input" placeholder="Addess" value="">
+                  </mat-form-field>
+                
+
+                  <div class="">
+                    <div class="form-btn">
+                      <button
+                        class="btn btn-secondary btn-sm"
+                        
+                      >
+                        Create
+                      </button>
+                    </div>
+                  </div>
+
+
+                  
+                </form>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </app-modal>
+

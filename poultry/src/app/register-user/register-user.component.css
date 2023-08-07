@@ -1,0 +1,24 @@
+.custom-mat-form-field {
+    height: 60px; /* Set the desired height */
+  }
+
+
+  .input-form{
+    width: 45%;
+  }
+
+  .my-form{
+    margin: auto;
+    margin-top: 3%;
+  }
+
+  .row
+  {
+    margin: auto;
+    margin-bottom: 1%;
+  }
+
+  .form-btn{
+    width: 88%;
+    margin-left: 1%;
+  }

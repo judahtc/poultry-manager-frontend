@@ -1,0 +1,47 @@
+
+  .custom-table{
+    margin: auto !important;
+    margin-top: 10%;
+    font-size: 60%;
+  }
+
+  .custom-table th{
+    font-size: 130%;
+  }
+  .custom-table td{
+    font-size: 80%;
+  }
+
+  .mat-row {
+    /* Specify the desired height for the rows */
+    height: 40px; /* You can adjust this value to your preference */
+  }
+
+  .top-btns{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    
+  }
+
+  .but{
+    margin-right: 1%;
+    font-size: 90%;
+  }
+
+  .modal-form-input {
+    height: 15px;
+  }
+  
+  .modal-form {
+    width: 100%;
+    height: 50px;
+
+  }
+
+  .your-custom-modal-content{
+    width: 400%;
+  }
+
+  .more_vert_icon{
+    font-size: 14px;
+  }
