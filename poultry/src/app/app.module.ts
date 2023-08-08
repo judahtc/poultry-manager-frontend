@@ -19,7 +19,8 @@ import { MatFormField, MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ModalComponent } from './modal/modal.component';
 import { RegisterUserComponent } from './register-user/register-user.component';
-
+import { ManageUserComponent } from './manage-user/manage-user.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     UsersComponent,
     PortalComponent,
     ModalComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    ManageUserComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,7 @@ import { RegisterUserComponent } from './register-user/register-user.component';
     CommonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatCardModule
     
     
   
